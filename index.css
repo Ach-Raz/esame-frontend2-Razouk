@@ -1,4 +1,3 @@
-/* Wireframe — elementi grafici essenziali */
 *,
 *::before,
 *::after {
@@ -79,7 +78,6 @@ a:hover {
   font-size: 12px;
 }
 
-/* Elenco */
 .movie-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -112,6 +110,17 @@ a:hover {
   font-size: 11px;
   text-align: center;
   padding: 8px;
+}
+
+.card__poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card__poster:has(img) {
+  padding: 0;
 }
 
 .card__body {
@@ -167,7 +176,6 @@ a.card__cta:hover {
   cursor: default;
 }
 
-/* Dettaglio */
 .detail {
   display: grid;
   grid-template-columns: 220px 1fr;
@@ -198,6 +206,17 @@ a.card__cta:hover {
   font-size: 12px;
   text-align: center;
   padding: 12px;
+}
+
+.detail__poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.detail__poster:has(img) {
+  padding: 0;
 }
 
 .detail__title {
