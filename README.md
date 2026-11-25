@@ -1,32 +1,53 @@
-# React + TypeScript + Vite
+# Esame Frontend 2 — Razouk
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Applicazione React e TypeScript per esplorare i film di *The Lord of the Rings* e consultare i dettagli di un film.
 
-Currently, two official plugins are available:
+## Setup Progetto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Librerie
 
-## React Compiler
+- React ^19.3.1
+- React DOM ^19.3.1
+- React Router DOM ^7.18.7
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Dipendenze
 
-## Expanding the Oxlint configuration
+- TypeScript ~7.0.2
+- Vite ^8.3.6
+- Plugin React per Vite ^6.1.2
+- Oxlint ^1.90.0
+- Tipi Node.js ^24.19.2
+- Tipi React ^19.3.0
+- Tipi React DOM ^19.3.0
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## Struttura del progetto
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```text
+esame-frontend2-Razouk/
+├── Documentazione/
+│   └── M9_scheda-componente-semplificata_Achraf_Razouk.docx
+├── public/
+│   ├── favicon.svg
+│   └── icons.svg
+├── src/
+│   ├── components/
+│   │   ├── Header.tsx
+│   │   ├── MovieCard.tsx
+│   │   └── Shell.tsx
+│   ├── pages/
+│   │   ├── MovieDetailPage.tsx
+│   │   └── MovieListPage.tsx
+│   ├── types/
+│   │   └── movie.ts
+│   ├── index.css
+│   └── main.tsx
+├── index.html
+├── package.json
+└── vite.config.ts
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+# Esecuzione
+
+1. nel file .env inserire la API KEY propria oppure sostituire ${API_KEY} in tutti i pages.
+2. eseguire dal terminale pnpm dev
+3. aprire local host nel browser con l'indirizzo generato

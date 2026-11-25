@@ -3,10 +3,10 @@ import { MovieCard } from "../components/MovieCard";
 import type { Movie, MovieSearchResponse } from "../types/movie";
 
 //al Prof, lascio la API key visibile per permetterle di vedere il sito caricato correttamente, altrimenti 
-
+// come richiesta prof, API KEY salvata nel .env blacklisted dal .gitignore
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
 const LIST_URL = `https://api.themoviedb.org/3/search/movie?query=The%20Lord%20of%20the%20Rings&include_adult=false&language=en-US&page=1&api_key=${API_KEY}`;
-
+// snippet preso e modificato da MovieApp
 export function MovieListPage() {
   const [movies, setMovies] = useState <Movie[]>([]);
   const [loading, setLoading] = useState <boolean>(true);

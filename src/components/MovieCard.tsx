@@ -1,8 +1,13 @@
+// routing
 import { Link } from "react-router-dom";
 import type { MovieCardProps } from "../types/movie";
 
+
+// image source
 const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500";
 
+
+// componente MovieCard 
 export function MovieCard({ movie }: MovieCardProps) {
   return (
     <article className="card">

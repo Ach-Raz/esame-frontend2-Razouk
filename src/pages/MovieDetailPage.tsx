@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import type { MovieDetail } from "../types/movie";
 
+// definizione varaibile KEY per la API KEY in .env
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
 const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500";
 
@@ -17,7 +18,7 @@ export function MovieDetailPage() {
 
     setLoading(true);
     setError(null);
-
+// sistemato le condizioni con l'AI in quanto non ricordavo bene il layout del if/else
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`)
       .then((res) => {
         if (!res.ok) {
